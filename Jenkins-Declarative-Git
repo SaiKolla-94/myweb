@@ -1,7 +1,9 @@
 pipeline {
     agent any
-
-    stages {
-        stage('Build') {
-            steps {
+    stages{
+        stage('Git CheckOut') {
+            steps{git credentialsId: 'mygithubaccount', url: 'https://github.com/SaiKolla-94/myweb.git'
             }
+        }
+    }
+}
